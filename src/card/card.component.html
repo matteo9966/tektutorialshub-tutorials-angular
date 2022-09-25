@@ -1,6 +1,7 @@
 <div class="card" bgColor #color="bgcolorchanger">
   <div class="header">
     <ng-content select=".card-header"></ng-content>
+    <div *showContent="true" class="balle"></div>
   </div>
   <div class="body">
     <ng-container *ngTemplateOutlet="shapeTemplate"></ng-container>
@@ -8,4 +9,5 @@
   <div class="footer" (click)="color.changeColor('green')">
     <ng-content select=".card-footer"></ng-content>
   </div>
+  <p #sottotitolo>titolo</p>
 </div>
